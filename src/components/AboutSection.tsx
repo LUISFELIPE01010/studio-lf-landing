@@ -1,11 +1,10 @@
-
 import { Award, Clock, Users, TrendingUp } from "lucide-react";
 
 const AboutSection = () => {
   const stats = [
     { icon: Users, number: "50+", label: "Clientes Atendidos" },
     { icon: Award, number: "98%", label: "Taxa de Satisfação" },
-    { icon: Clock, number: "7", label: "Dias de Entrega" },
+    { icon: Clock, number: "3", label: "Dias de Entrega" },
     { icon: TrendingUp, number: "300%", label: "Aumento Médio em Vendas" }
   ];
 
