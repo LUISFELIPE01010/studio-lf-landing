@@ -36,7 +36,7 @@ const PortfolioSection = () => {
     <section className="py-32 px-6 bg-white relative">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-20 animate-fade-in">
-          <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium mb-8">
+          <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-medium mb-8">
             <Star className="w-4 h-4" />
             <span>Projetos que Impressionam</span>
           </div>
@@ -68,11 +68,11 @@ const PortfolioSection = () => {
                     className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute top-4 left-4">
-                    <span className="bg-black text-white px-3 py-1 rounded-full text-xs font-medium">
+                    <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-medium">
                       {project.category}
                     </span>
                   </div>
-                  <div className="absolute top-4 right-4 bg-green-500 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute top-4 right-4 bg-blue-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <ExternalLink className="w-4 h-4" />
                   </div>
                 </div>
@@ -87,8 +87,8 @@ const PortfolioSection = () => {
                   </p>
 
                   <div className="flex items-center gap-2 mb-6">
-                    <Zap className="w-5 h-5 text-green-500" />
-                    <span className="text-green-600 font-sf font-medium">{project.results}</span>
+                    <Zap className="w-5 h-5 text-blue-600" />
+                    <span className="text-blue-600 font-sf font-medium">{project.results}</span>
                   </div>
 
                   <div className="flex flex-wrap gap-2 mb-6">
@@ -99,7 +99,7 @@ const PortfolioSection = () => {
                     ))}
                   </div>
 
-                  <button className="w-full flex items-center justify-center gap-2 bg-gray-900 text-white py-3 rounded-xl font-sf font-medium hover:bg-gray-800 transition-colors group">
+                  <button className="w-full flex items-center justify-center gap-2 bg-blue-600 text-white py-3 rounded-xl font-sf font-medium hover:bg-blue-700 transition-colors group">
                     <span>Ver Detalhes</span>
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </button>
@@ -111,12 +111,12 @@ const PortfolioSection = () => {
 
         <div className="text-center mt-16">
           <a
-            href="https://wa.me/5513991808329?text=Quero+ver+mais+projetos"
+            href="https://wa.me/5513991808329?text=Quero+minha+landing+page"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-2xl font-sf font-medium hover:bg-blue-700 transition-colors"
           >
-            <span>Ver Todos os Projetos</span>
+            <span>Quero minha landing page</span>
             <ArrowRight className="w-5 h-5" />
           </a>
         </div>
