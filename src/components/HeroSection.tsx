@@ -1,26 +1,100 @@
 
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, Sparkles, Zap, Target } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen flex flex-col justify-center items-center px-6 py-20 bg-white">
-      <div className="max-w-4xl mx-auto text-center animate-fade-in">
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-sf font-light text-gray-900 mb-8 leading-tight">
-          Studio Luis Felipe
-        </h1>
-        
-        <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed font-sf font-light">
-          Landing pages minimalistas que vendem. Crio páginas modernas, rápidas e personalizadas para impulsionar negócios de forma profissional e eficiente.
-        </p>
-        
-        <a
-          href="https://wa.me/5513991808329?text=Olá%2C+quero+uma+landing+page+profissional"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block bg-black text-white px-8 py-4 rounded-full text-lg font-sf font-medium hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
-        >
-          Quero uma landing page
-        </a>
+    <section className="min-h-screen flex flex-col justify-center items-center px-6 py-20 bg-gradient-to-br from-white via-gray-50 to-white relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full blur-3xl opacity-30 animate-pulse"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-green-100 to-blue-100 rounded-full blur-3xl opacity-30 animate-pulse delay-1000"></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto relative z-10">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          {/* Left side - Text content */}
+          <div className="order-2 lg:order-1 animate-fade-in">
+            <div className="inline-flex items-center gap-2 bg-black text-white px-4 py-2 rounded-full text-sm font-medium mb-8">
+              <Sparkles className="w-4 h-4" />
+              <span>Web Designer Especialista</span>
+            </div>
+            
+            <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed font-sf font-light">
+              Landing pages minimalistas que <span className="text-black font-medium">realmente vendem</span>. 
+              Crio páginas modernas, rápidas e personalizadas para impulsionar negócios de forma 
+              profissional e eficiente.
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+              <div className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm border border-gray-100">
+                <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
+                  <Target className="w-5 h-5 text-green-600" />
+                </div>
+                <div>
+                  <p className="font-sf font-medium text-gray-900">Foco em Conversão</p>
+                  <p className="text-sm text-gray-600">Páginas que vendem</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm border border-gray-100">
+                <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+                  <Zap className="w-5 h-5 text-blue-600" />
+                </div>
+                <div>
+                  <p className="font-sf font-medium text-gray-900">Entrega Rápida</p>
+                  <p className="text-sm text-gray-600">Em até 7 dias</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a
+                href="https://wa.me/5513991808329?text=Olá%2C+quero+uma+landing+page+profissional"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center bg-black text-white px-8 py-4 rounded-2xl text-lg font-sf font-medium hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 hover:shadow-xl group"
+              >
+                <span>Quero minha landing page</span>
+                <ArrowDown className="w-5 h-5 ml-2 transform rotate-[-45deg] group-hover:translate-x-1 transition-transform" />
+              </a>
+
+              <div className="flex items-center gap-3 px-6 py-4 bg-gray-50 rounded-2xl">
+                <div className="flex -space-x-3">
+                  <img src="https://images.unsplash.com/photo-1494790108755-2616b612b367?auto=format&fit=crop&w=40&h=40&q=80" alt="Cliente 1" className="w-8 h-8 rounded-full border-2 border-white" />
+                  <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=40&h=40&q=80" alt="Cliente 2" className="w-8 h-8 rounded-full border-2 border-white" />
+                  <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=40&h=40&q=80" alt="Cliente 3" className="w-8 h-8 rounded-full border-2 border-white" />
+                </div>
+                <div>
+                  <p className="text-sm font-sf font-medium text-gray-900">+50 clientes satisfeitos</p>
+                  <div className="flex items-center gap-1">
+                    {[...Array(5)].map((_, i) => (
+                      <div key={i} className="w-3 h-3 bg-yellow-400 rounded-full"></div>
+                    ))}
+                    <span className="text-xs text-gray-600 ml-1">4.9/5</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right side - Title */}
+          <div className="order-1 lg:order-2 text-center lg:text-right animate-scale-in">
+            <h1 className="text-6xl md:text-8xl lg:text-9xl font-sf font-extralight text-gray-900 leading-none tracking-tight">
+              <span className="block">Studio</span>
+              <span className="block bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 bg-clip-text text-transparent">
+                Luis Felipe
+              </span>
+            </h1>
+            <div className="mt-8 relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-3xl blur-xl opacity-20"></div>
+              <div className="relative bg-white/90 backdrop-blur-sm border border-gray-200 rounded-3xl p-6">
+                <p className="text-lg font-sf font-medium text-gray-700 mb-2">Landing Pages Profissionais</p>
+                <p className="text-3xl font-sf font-bold text-gray-900">R$ 500</p>
+                <p className="text-sm text-gray-600 mt-1">Investimento único</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       
       <div className="absolute bottom-10 animate-bounce">
