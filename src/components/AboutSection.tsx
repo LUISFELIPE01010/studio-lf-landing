@@ -32,7 +32,7 @@ const AboutSection = () => {
               </p>
             </div>
 
-            <blockquote className="mt-8 p-6 border-l-4 border-blue-600 rounded-sm bg-slate-50">
+            <blockquote className="mt-8 p-6 border-l-4 border-blue-600 rounded-sm bg-white/[0.31]">
               <p className="text-xl md:text-2xl font-sf font-medium italic text-blue-600">
                 "Acredito que grandes transformações começam com uma boa primeira impressão. E é isso que eu construo"
               </p>
