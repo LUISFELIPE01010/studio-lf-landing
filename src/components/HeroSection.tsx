@@ -1,9 +1,6 @@
-
 import { ArrowDown, Sparkles, Zap, Target } from "lucide-react";
-
 const HeroSection = () => {
-  return (
-    <section className="min-h-screen flex flex-col justify-center items-center px-6 py-20 bg-gradient-to-br from-white via-gray-50 to-white relative overflow-hidden">
+  return <section className="min-h-screen flex flex-col justify-center items-center px-6 py-20 bg-gradient-to-br from-white via-gray-50 to-white relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full blur-3xl opacity-20 animate-pulse"></div>
@@ -52,18 +49,13 @@ const HeroSection = () => {
                 </div>
                 <div>
                   <p className="font-sf font-medium text-gray-900">Entrega Rápida</p>
-                  <p className="text-sm text-gray-600">Em até 7 dias</p>
+                  <p className="text-sm text-gray-600">Em até 3 dias</p>
                 </div>
               </div>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href="https://wa.me/5513991808329?text=Olá%2C+quero+uma+landing+page+profissional"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center bg-blue-600 text-white px-8 py-4 rounded-2xl text-lg font-sf font-medium hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-xl group"
-              >
+              <a href="https://wa.me/5513991808329?text=Olá%2C+quero+uma+landing+page+profissional" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center bg-blue-600 text-white px-8 py-4 rounded-2xl text-lg font-sf font-medium hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-xl group">
                 <span>Quero minha landing page</span>
                 <ArrowDown className="w-5 h-5 ml-2 transform rotate-[-45deg] group-hover:translate-x-1 transition-transform" />
               </a>
@@ -75,8 +67,6 @@ const HeroSection = () => {
       <div className="absolute bottom-10 animate-bounce">
         <ArrowDown className="w-6 h-6 text-gray-400" />
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
