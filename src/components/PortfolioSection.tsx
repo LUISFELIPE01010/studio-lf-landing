@@ -33,9 +33,9 @@ const PortfolioSection = () => {
   ];
 
   return (
-    <section className="py-32 px-6 bg-white relative">
+    <section className="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 bg-white relative">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-20 animate-fade-in">
+        <div className="text-center mb-12 sm:mb-16 lg:mb-20 animate-fade-in">
           <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-medium mb-8">
             <Star className="w-4 h-4" />
             <span>Projetos que Impressionam</span>
@@ -51,12 +51,12 @@ const PortfolioSection = () => {
           </p>
         </div>
         
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {projects.map((project, index) => (
             <div
               key={project.id}
               className={`group animate-fade-in-up hover:transform hover:scale-105 transition-all duration-500 ${
-                index === 1 ? 'lg:scale-110 lg:z-10' : ''
+                index === 1 ? 'sm:col-span-2 lg:col-span-1 lg:scale-110 lg:z-10' : ''
               }`}
               style={{ animationDelay: `${index * 0.2}s` }}
             >
@@ -64,8 +64,10 @@ const PortfolioSection = () => {
                 <div className="relative overflow-hidden">
                   <img
                     src={project.image}
-                    alt={project.title}
+                    alt={`Screenshot da ${project.title} - ${project.description}`}
                     className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                    loading="lazy"
+                    decoding="async"
                   />
                   <div className="absolute top-4 left-4">
                     <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-medium">
